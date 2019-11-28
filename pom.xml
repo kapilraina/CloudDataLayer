@@ -29,10 +29,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		-->
 		<!-- Allow for automatic restarts when classpath contents change. -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -45,7 +47,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Tracing -->
+		<!-- Tracing 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-sleuth</artifactId>
@@ -54,6 +56,7 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
+		-->
 		<!-- Dependencies for LogStash -->
 		<dependency>
 			<groupId>net.logstash.logback</groupId>
