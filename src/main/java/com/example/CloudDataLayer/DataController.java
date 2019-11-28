@@ -53,7 +53,7 @@ public class DataController {
 		p1.setCategory("Furnishing");
 		p1.setCheckoutprice(50.00);
 		p1.setId("P1000");
-		p1.setName("6x9 Carpet");
+		p1.setName("6x10 Carpet");
 		p1.setQuantity(1);
 		p1.setSaleprice(45.00);
 		p1.setTotal(45.00);
