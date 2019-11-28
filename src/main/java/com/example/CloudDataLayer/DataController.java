@@ -51,7 +51,7 @@ public class DataController {
 		Cart c1 = new Cart();
 		Product p1 = new Product();
 		p1.setCategory("Furnishings");
-		p1.setCheckoutprice(50.00);
+		p1.setCheckoutprice(50.45);
 		p1.setId("P1000");
 		p1.setName("6x10 Carpet");
 		p1.setQuantity(1);
