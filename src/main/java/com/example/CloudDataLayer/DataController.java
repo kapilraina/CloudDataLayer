@@ -38,6 +38,11 @@ public class DataController {
 		return "BHOR";
 	}
 
+	@RequestMapping(path = "/cart/3")
+	public String low() {
+		return "HISENBERG";
+	}
+	
 	@RequestMapping(path = "/cart/r")
 	public ResponseEntity<String> redirect() {
 		ResponseEntity<String> response = new ResponseEntity<String>(HttpStatus.FOUND);
