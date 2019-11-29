@@ -50,7 +50,7 @@ public class DataController {
 	public void postconstruct() {
 		Cart c1 = new Cart();
 		Product p1 = new Product();
-		p1.setCategory("Furnishings");
+		p1.setCategory("Persian Carpet");
 		p1.setCheckoutprice(50.45);
 		p1.setId("P1000");
 		p1.setName("9x10 Carpet");
