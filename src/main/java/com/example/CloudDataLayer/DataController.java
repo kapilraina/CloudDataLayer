@@ -39,7 +39,7 @@ public class DataController {
 	}
 
 	@RequestMapping(path = "/cart/3")
-	public String low() {
+	public String medium() {
 		return "HISENBERG";
 	}
 	
