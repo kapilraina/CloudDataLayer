@@ -3,7 +3,7 @@ pipeline {
  agent any 
  
  environment{
- 	PATH = "/opt/maven/apache-maven-3.6.3/bin;$PATH"
+	
  }
  
  stages{
@@ -11,7 +11,7 @@ pipeline {
   stage('Maven Code Build') { 
   	
   	steps {
-       	sh 'mvn clean package'
+       	sh "mvn clean package"
      }
   	
   }
