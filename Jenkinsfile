@@ -6,7 +6,7 @@ pipeline {
   stage('Maven Code Build') { 
   	
   	steps {
-       withMaven(maven: 'maven')
+       maven_invoker(maven: 'maven')
        {
        		sh 'mvn clean compile'
        }
