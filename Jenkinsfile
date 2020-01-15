@@ -17,7 +17,7 @@ pipeline {
   stage('Docker Image Build') { 
   	
   	steps {
-       	sh "sudo docker build -t kapilshekharraina/clouddatalayer:1.0.0 ."
+       	sh "docker build -t kapilshekharraina/clouddatalayer:1.0.0 ."
      }
   	
   }
