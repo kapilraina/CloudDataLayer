@@ -13,6 +13,14 @@ pipeline {
      }
   	
   }
+  
+  stage('Docker Image Build') { 
+  	
+  	steps {
+       	sh "docker build -t kapilshekharraina/clouddatalayer:1.0.0"
+     }
+  	
+  }
  
  
  
