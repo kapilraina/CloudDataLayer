@@ -1,8 +1,10 @@
 node {
     checkout scm
-    docker.withRegistry("https://docker.io","DockerHub")
-    def customImage = docker.build("kapilshekharraina/clouddatalayer:${env.BUILD_ID}")
-    customImage.push()
-
-    customImage.push('latest')
+    
+    docker.withRegistry("https://docker.io","DockerHub"){
+	    def customImage = docker.build("kapilshekharraina/clouddatalayer:${env.BUILD_ID}")
+	    customImage.push()
+	
+	    customImage.push('latest')
+    }
 }
