@@ -17,7 +17,7 @@ pipeline {
   stage('Docker Image Build') { 
   	
   	steps {
-       	sh "docker build -t kapilshekharraina/clouddatalayer:${env.BUILD_ID}."
+       	sh "docker build -t kapilshekharraina/clouddatalayer:${env.BUILD_ID} ."
      }
   	
   }
