@@ -13,7 +13,7 @@ node {
  
    }
    
-    stage('Build Code') {  
+    stage('Build Image') {  
  
      	customImage = docker.build("kapilshekharraina/clouddatalayer:${env.BUILD_ID}")
  
