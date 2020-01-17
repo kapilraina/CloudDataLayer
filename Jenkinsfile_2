@@ -1,5 +1,5 @@
 node {
-
+	def customImage
 	stage('Preparation') {  
  
      	checkout scm
@@ -15,7 +15,7 @@ node {
    
     stage('Build Code') {  
  
-     	def customImage = docker.build("kapilshekharraina/clouddatalayer:${env.BUILD_ID}")
+     	customImage = docker.build("kapilshekharraina/clouddatalayer:${env.BUILD_ID}")
  
    }
     
