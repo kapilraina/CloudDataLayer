@@ -12,12 +12,16 @@ node {
      	sh "mvn clean package"
  
    }
+   
+    stage('Build Code') {  
+ 
+     	def customImage = docker.build("kapilshekharraina/clouddatalayer:${env.BUILD_ID}")
+ 
+   }
     
-     stage('Build Image') {  
+     stage('Push Image') {  
 	    docker.withRegistry("https://docker.io","DockerHub"){
-		    def customImage = docker.build("kapilshekharraina/clouddatalayer:${env.BUILD_ID}")
-		    customImage.push("latest")
-		
+		  	
 		    customImage.push('latest')
 	    }
     }
