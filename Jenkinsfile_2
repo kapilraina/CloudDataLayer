@@ -20,7 +20,7 @@ node {
    }
     
      stage('Push Image') {  
-	    docker.withRegistry("https://docker.io","DockerHub"){
+	    docker.withRegistry("","DockerHub"){
 		  	
 		    customImage.push('latest')
 	    }
