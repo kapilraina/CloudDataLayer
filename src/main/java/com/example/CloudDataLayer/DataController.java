@@ -60,13 +60,13 @@ public class DataController {
 		p1.setId("P1000");
 		p1.setName("9x10 Carpet");
 		p1.setQuantity(1);
-		p1.setSaleprice(45.00);
-		p1.setTotal(45.00);
+		p1.setSaleprice(95.00);
+		p1.setTotal(95.00);
 
 		List<Product> products = new ArrayList<Product>();
 		products.add(p1);
 
-		c1.setCarttotal(45.00);
+		c1.setCarttotal(95.00);
 		c1.setId(1000);
 		c1.setProducts(products);
 
