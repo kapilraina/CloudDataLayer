@@ -1,0 +1,35 @@
+node{
+    
+    stage("SCM CHECKOUT"){
+        git credentialsId: 'GitHub', url: 'https://github.com/kapilraina/CloudDataLayer.git'
+        
+    }
+    
+    stage("Maven Build Code"){
+        def mvnHome = tool name: 'maven3.6', type: 'maven'
+        def mvnCMD = "${mvnHome}/bin/mvn"
+        sh "${mvnCMD} clean package"
+    }
+    
+     stage("Docker Image Build"){
+        sh "docker build -t kapilshekharraina/clouddatalayer:${env.BUILD_ID} ."
+    }
+    
+     stage("Docker Image Push"){
+         withCredentials([string(credentialsId: 'DHPwd', variable: 'DhPwd')]) {
+                sh "docker login -u kapilshekharraina -p ${DHPwd}"
+                sh "docker tag kapilshekharraina/clouddatalayer:${env.BUILD_ID} kapilshekharraina/clouddatalayer:latest"
+                sh "docker push kapilshekharraina/clouddatalayer:${env.BUILD_ID}"
+                sh "docker push kapilshekharraina/clouddatalayer:latest"
+            }
+        }
+    
+      stage("Rollout Container"){
+          
+        sh "docker container stop clouddatalayer"
+        sh "docker container rm clouddatalayer"
+        sh "docker run -d --name clouddatalayer -p 8084:8084 kapilshekharraina/clouddatalayer:latest"
+        
+    }
+    
+}
