@@ -30,7 +30,7 @@ public class DataController {
 
 	@RequestMapping(path = "/cart/1")
 	public String high() {
-		return "Mendel";
+		return "Harmonium";
 	}
 
 	@RequestMapping(path = "/cart/2")
