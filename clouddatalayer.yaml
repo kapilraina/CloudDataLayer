@@ -13,7 +13,7 @@ spec:
     port: 8080
     protocol: TCP
     targetPort: 8084
-  type: NodePort
+  type: LoadBalancer
   selector:
  #  run: clouddatalayer
    app: clouddatalayer
